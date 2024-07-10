@@ -9,6 +9,7 @@
 }
 
 .container {
+  position: relative;
   background: #F0F3FD;
   color: #333;
 }
@@ -49,6 +50,10 @@
   display: flex;
   font-size: 24px;
   cursor: pointer;
+}
+
+.mode-switch.disabled {
+  pointer-events: none;
 }
 
 .home {
@@ -106,7 +111,6 @@
   display: inline-block;
   padding: 11px 32px;
   background: #37A1F2;
-  border: 1px solid black;
   border-radius: 40px;
   box-shadow: 0 0 10px rgb(0, 0, 0, .1);
   font-size: 16px;
@@ -119,6 +123,7 @@
 .resume-btn:hover {
   background: transparent;
   color: #37A1F2;
+  border: 1px solid black;
 }
 
 .profile img {
@@ -127,4 +132,37 @@
   right: 30px;
   width: 45%;
   pointer-events: none;
+}
+
+#container-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #15202B;
+  color: #F0F3FD;
+}
+
+#container-dark .logo,
+#container-dark .navbar a {
+  color: #F0F3FD;
+}
+
+#container-dark .navbar a:hover,
+#container-dark .navbar a.active {
+  color: #37A1F2;
+}
+
+#container,
+#container-dark {
+  clip-path: circle(0% at 0 0);
+  transition-delay: 1.5s;
+}
+
+.active#container,
+.active#container-dark {
+  z-index: 1;
+  clip-path: circle(150% at 0 0);
+  transition: 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 0s;
 }
