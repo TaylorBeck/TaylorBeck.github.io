@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  background: #F0F3FD;
+  color: #333;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 10%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 26px;
+  color: #333;
+  font-weight: 600;
+  margin-right: auto;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  margin-right: 35px;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a:active {
+  color: #37A1F2;
+}
+
+.mode-switch {
+  display: flex;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 10% 0;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  line-height: 1.2;
+}
+
+.home-content h3 {
+  font-size: 32px;
+}
+
+.home-content h3 span {
+  color: #37A1F2;
+  text-shadow: #333;
+}
+
+.home-content p {
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #37A1F2;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+  font-size: 20px;
+  color: #37A1F2;
+  margin: 5px 15px 25px 0;
+  transition: .3s;
+}
+
+.social a:hover {
+  background: #37A1F2;
+  color: #F0F3FD;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 11px 32px;
+  background: #37A1F2;
+  border: 1px solid black;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+  font-size: 16px;
+  color: #F0F3FD;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.resume-btn:hover {
+  background: transparent;
+  color: #37A1F2;
+}
+
+.profile img {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  width: 45%;
+  pointer-events: none;
+}
