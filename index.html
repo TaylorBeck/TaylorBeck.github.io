@@ -13,27 +13,44 @@
   <body>
     <div id="container" class="container active">
       <header class="header">
-        <a href="#" class="logo">Taylor</a>
+        <a href="index.html" class="logo">Taylor</a>
 
         <nav class="navbar">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Portfolio</a>
-          <a href="">Blog</a>
-          <a href="">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
         </nav>
 
-        <div class="mode-switch">
-          <i class="bx bx-moon"></i>
+        <div class="header-icons">
+          <i class="bx bx-menu menu-icon" id="menu-icon"></i>
+          <div class="mode-switch">
+            <i class="bx bx-moon"></i>
+          </div>
         </div>
       </header>
 
+      <!-- Add this new navigation drawer -->
+      <div class="nav-drawer">
+        <div class="nav-drawer-content">
+          <i class="bx bx-x close-icon" id="close-icon"></i>
+          <nav class="drawer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+
       <section class="home">
-        <div class="home-content">
+        <div class="home-content animate-item">
           <h3>Hey, it's</h3>
           <h1>Taylor Beck</h1>
           <h3>I'm a <span>Web Developer</span></h3>
-          <div class="skills">
+          <div class="skills animate-item">
             <span class="skill-badge">React</span>
             <span class="skill-badge">Next.js</span>
             <span class="skill-badge">Vue</span>
@@ -45,17 +62,17 @@
             <span class="skill-badge language">JavaScript</span>
             <span class="skill-badge language">Python</span>
           </div>
-          <p>I have 7 years of experience building frontend and backend applications.</p>
+          <p>I have 8 years of experience building frontend and backend applications.</p>
 
-          <div class="social">
+          <div class="social animate-item">
             <a href="https://github.com/TaylorBeck" target="_blank" rel="noopener"><i class="bx bxl-github" title="Github" alt="Github"></i></a>
             <a href="https://www.linkedin.com/in/taylorbeck/" target="_blank" rel="noopener"><i class="bx bxl-linkedin" title="LinkedIn" alt="LinkedIn"></i></a>
             <a href="https://stackoverflow.com/users/1558365/tagabek" target="_blank" rel="noopener"><i class="bx bxl-stack-overflow" title="StackOverflow" alt="StackOverflow"></i></a>
             <a href="https://x.com/" target="_blank" rel="noopener"><i class="bx bxl-twitter" title="X" alt="X"></i></a>
           </div>
 
-          <div class="resume-btn-container">
-            <a href="#" class="resume-btn"><i class="bx bxs-download download"></i>Download Resume</a>
+          <div class="resume-btn-container animate-item">
+            <a target="_blank" rel="noopener" href="https://taylor-portfolio-s3.s3.us-west-2.amazonaws.com/Taylor_Beck_Resume.pdf" class="resume-btn" download><i class="bx bxs-download download"></i>Download Resume</a>
           </div>
         </div>
 
