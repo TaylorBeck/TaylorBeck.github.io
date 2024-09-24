@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Beck - Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div id="container" class="container active">
+      <header class="header">
+        <a href="index.html" class="logo">Taylor</a>
+
+        <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-icons">
+          <i class="bx bx-menu menu-icon" id="menu-icon"></i>
+          <div class="mode-switch">
+            <i class="bx bx-moon"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-drawer">
+        <div class="nav-drawer-content">
+          <i class="bx bx-x close-icon" id="close-icon"></i>
+          <nav class="drawer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+
+      <section class="blog">
+        <div class="blog-content">
+          <h1 class="animate-item">My Blog</h1>
+          <p class="animate-item">Welcome to my blog! Here, I share my thoughts and experiences on web development, technology, and more.</p>
+          
+          <div class="blog-grid">
+            <div class="blog-item animate-item">
+              <img src="ai-in-development.png" alt="AI in Web Development">
+              <div class="blog-item-content">
+                <h3>The Future of AI in Web Development</h3>
+                <p class="date">May 15, 2024</p>
+                <p>Artificial Intelligence is revolutionizing the way we build and interact with websites.</p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+
+            <div class="blog-item animate-item">
+              <img src="battle.jpg" alt="React vs Vue">
+              <div class="blog-item-content">
+                <h3>React vs Vue: Which Should You Choose in 2023?</h3>
+                <p class="date">April 22, 2024</p>
+                <p>React and Vue are two of the most popular frontend frameworks. But which one is right for your project?</p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+
+            <div class="blog-item animate-item">
+              <img src="speed-up.jpg" alt="Web Performance">
+              <div class="blog-item-content">
+                <h3>10 Tips for Improving Web Application Performance</h3>
+                <p class="date">March 10, 2024</p>
+                <p>Performance is crucial for user experience and SEO. In this post, I share my top 10 tips for optimizing...</p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
