@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Beck - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div id="container" class="container active">
+      <header class="header">
+        <a href="index.html" class="logo">Taylor</a>
+
+        <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-icons">
+          <i class="bx bx-menu menu-icon" id="menu-icon"></i>
+          <div class="mode-switch">
+            <i class="bx bx-moon"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-drawer">
+        <div class="nav-drawer-content">
+          <i class="bx bx-x close-icon" id="close-icon"></i>
+          <nav class="drawer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+
+      <section class="portfolio">
+        <div class="portfolio-content">
+          <h1 class="animate-item">My Portfolio</h1>
+          <p class="animate-item">Here are some of the web applications I've built. Each project showcases different skills and technologies.</p>
+          
+          <div class="portfolio-grid">
+            <div class="portfolio-item animate-item">
+              <img src="poultrypro.png" alt="Poultry Pro">
+              <div class="portfolio-item-content">
+                <h3>PoultryPro</h3>
+                <p>A poultry management system that allows farmers to track their flocks and manage their inventory.</p>
+                <div class="portfolio-item-tags">
+                  <span>React</span>
+                  <span>Material UI</span>
+                  <span>Express</span>
+                  <span>Chart.js</span>
+                  <span>Firebase</span>
+                  <span>JavaScript</span>
+                  <span>Microsoft Azure</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item animate-item">
+              <img src="inventory.png" alt="Admin Charts">
+              <div class="portfolio-item-content">
+                <h3>AdminCharts</h3>
+                <p>An E-commerce inventory management platform for online retailers.</p>
+                <div class="portfolio-item-tags">
+                  <span>Next.js</span>
+                  <span>Express</span>
+                  <span>Postgres</span>
+                  <span>TypeScript</span>
+                  <span>AWS EC2</span>
+                  <span>API Gateway</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item animate-item">
+              <img src="imagen.png" alt="Imagen">
+              <div class="portfolio-item-content">
+                <h3>Imagen</h3>
+                <p>An AI companion app for creating and talking to virtual characters and assistants.</p>
+                <div class="portfolio-item-tags">
+                  <span>Next.js</span>
+                  <span>Tailwind</span>
+                  <span>Postgres</span>
+                  <span>Claude 3.5</span>
+                  <span>ChatGPT o1</span>
+                  <span>Llama 2</span>
+                  <span>ElevenLabs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-item animate-item">
+              <img src="interviewhub.png" alt="Interview Hub">
+              <div class="portfolio-item-content">
+                <h3>InterviewHub</h3>
+                <p>A job board using AI for resume generation and mock video interviews.</p>
+                <div class="portfolio-item-tags">
+                  <span>Next.js</span>
+                  <span>Postgres</span>
+                  <span>Tailwind</span>
+                  <span>WebRTC</span>
+                  <span>Flux</span>
+                  <span>ElevenLabs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
