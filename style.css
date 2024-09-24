@@ -948,3 +948,147 @@
 .portfolio-item:nth-child(3) { transition-delay: 0.3s; }
 .portfolio-item:nth-child(4) { transition-delay: 0.4s; }
 
+/* Contact styles */
+.contact {
+  min-height: 100vh;
+  padding: 120px 10% 60px;
+}
+
+.contact-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.contact-content > p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: #37A1F2;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #2980b9;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact-info li i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #37A1F2;
+}
+
+.contact-info .social {
+  margin-top: 30px;
+}
+
+/* Dark mode styles for contact page */
+#container-dark .contact-form input,
+#container-dark .contact-form textarea {
+  background: #1a2634;
+  border-color: #2c3e50;
+  color: #F0F3FD;
+}
+
+#container-dark .submit-btn {
+  background: #2980b9;
+}
+
+#container-dark .submit-btn:hover {
+  background: #3498db;
+}
+
+/* Responsive styles for contact page */
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 100px 5% 40px;
+  }
+
+  .contact-content h1 {
+    font-size: 36px;
+  }
+
+  .contact-content > p {
+    font-size: 16px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation for contact items */
+.contact-form,
+.contact-info {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact-form.animate-in,
+.contact-info.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-form { transition-delay: 0.1s; }
+.contact-info { transition-delay: 0.2s; }

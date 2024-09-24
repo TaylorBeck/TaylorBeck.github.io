@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Beck - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+
+  <body>
+    <div id="container" class="container active">
+      <header class="header">
+        <a href="index.html" class="logo">Taylor</a>
+
+        <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-icons">
+          <i class="bx bx-menu menu-icon" id="menu-icon"></i>
+          <div class="mode-switch">
+            <i class="bx bx-moon"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-drawer">
+        <div class="nav-drawer-content">
+          <i class="bx bx-x close-icon" id="close-icon"></i>
+          <nav class="drawer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+
+      <section class="contact">
+        <div class="contact-content">
+          <h1 class="animate-item">Get in Touch</h1>
+          <p class="animate-item">Have a question or want to work together? Feel free to reach out!</p>
+          
+          <div class="contact-grid">
+            <div class="contact-form animate-item">
+              <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+            </div>
+
+            <div class="contact-info animate-item">
+              <h2>Contact Information</h2>
+              <ul>
+                <li><i class='bx bx-envelope'></i> beck.taylorg@gmail.com</li>
+                <li><i class='bx bx-phone'></i> +1 (858) 952-2954</li>
+                <li><i class='bx bx-map'></i> Remote, US</li>
+              </ul>
+              <div class="social">
+                <a href="https://github.com/TaylorBeck" target="_blank" rel="noopener"><i class="bx bxl-github" title="Github" alt="Github"></i></a>
+                <a href="https://www.linkedin.com/in/taylorbeck/" target="_blank" rel="noopener"><i class="bx bxl-linkedin" title="LinkedIn" alt="LinkedIn"></i></a>
+                <a href="https://stackoverflow.com/users/1558365/tagabek" target="_blank" rel="noopener"><i class="bx bxl-stack-overflow" title="StackOverflow" alt="StackOverflow"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener"><i class="bx bxl-twitter" title="X" alt="X"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
