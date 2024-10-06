@@ -121,5 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Setup nav drawer for both light and dark containers
   setupNavDrawer(container);
   setupNavDrawer(darkContainer);
-});
 
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+});
