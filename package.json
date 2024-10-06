@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Clone this repository and replace `taylor-light.webp` and `taylor-dark.webp` with your own photos (use an image background remover and add drop shadows).",
+  "main": "script.js",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "npx http-server ./build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20"
+  },
+  "dependencies": {
+    "terser": "^5.33.0"
+  }
+}
