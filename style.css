@@ -948,6 +948,17 @@
 .portfolio-item:nth-child(3) { transition-delay: 0.3s; }
 .portfolio-item:nth-child(4) { transition-delay: 0.4s; }
 
+.portfolio-link {
+  text-decoration: none;
+  color: white;
+  color: inherit;
+  display: block;
+}
+
+.portfolio-link:hover {
+  scale: 103%;
+}
+
 /* Contact styles */
 .contact {
   min-height: 100vh;
