@@ -1,3 +1,50 @@
+// Analytics helper functions
+function trackEvent(eventName, parameters = {}) {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', eventName, parameters);
+  }
+}
+
+function trackResumeDownload() {
+  trackEvent('resume_download', {
+    event_category: 'recruitment',
+    event_label: 'resume_pdf',
+    value: 1
+  });
+}
+
+function trackSocialClick(platform) {
+  trackEvent('social_click', {
+    event_category: 'recruitment',
+    event_label: platform,
+    value: 1
+  });
+}
+
+function trackPortfolioClick(projectName) {
+  trackEvent('portfolio_click', {
+    event_category: 'engagement',
+    event_label: projectName,
+    value: 1
+  });
+}
+
+function trackPageEngagement(pageName) {
+  trackEvent('page_engagement', {
+    event_category: 'engagement',
+    event_label: pageName,
+    value: 1
+  });
+}
+
+function trackBlogShare(platform, postTitle) {
+  trackEvent('blog_share', {
+    event_category: 'engagement',
+    event_label: `${platform}_${postTitle}`,
+    value: 1
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.container');
   const darkContainer = container.cloneNode(true);
@@ -139,5 +186,70 @@ document.addEventListener('DOMContentLoaded', () => {
   // Setup nav drawer for both light and dark containers
   setupNavDrawer(container);
   setupNavDrawer(darkContainer);
+
+  // Track page engagement after user has been on page for 10 seconds
+  setTimeout(() => {
+    const pageName = document.title.split(' - ')[0] || 'Home';
+    trackPageEngagement(pageName);
+  }, 10000);
+
+  // Track resume download clicks
+  const resumeButtons = document.querySelectorAll('.resume-btn, a[download]');
+  resumeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      trackResumeDownload();
+    });
+  });
+
+  // Track social media clicks
+  const socialLinks = document.querySelectorAll('.social a');
+  socialLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href');
+      let platform = 'unknown';
+      
+      if (href.includes('github.com')) platform = 'github';
+      else if (href.includes('linkedin.com')) platform = 'linkedin';
+      else if (href.includes('stackoverflow.com')) platform = 'stackoverflow';
+      else if (href.includes('twitter.com') || href.includes('x.com')) platform = 'twitter';
+      
+      trackSocialClick(platform);
+    });
+  });
+
+  // Track portfolio project clicks
+  const portfolioLinks = document.querySelectorAll('.portfolio-link, .portfolio-item a');
+  portfolioLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const projectName = link.querySelector('h3')?.textContent || 'unknown_project';
+      trackPortfolioClick(projectName);
+    });
+  });
+
+  // Track navigation clicks
+  const navLinks = document.querySelectorAll('.navbar a, .drawer-nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const pageName = link.textContent.trim();
+      trackEvent('navigation_click', {
+        event_category: 'navigation',
+        event_label: pageName.toLowerCase(),
+        value: 1
+      });
+    });
+  });
+
+  // Track dark mode usage
+  modeSwitch.forEach(switchEl => {
+    const originalClickHandler = switchEl.onclick;
+    switchEl.addEventListener('click', () => {
+      const isDarkMode = !container.classList.contains('active');
+      trackEvent('theme_switch', {
+        event_category: 'engagement',
+        event_label: isDarkMode ? 'dark' : 'light',
+        value: 1
+      });
+    });
+  });
 });
 

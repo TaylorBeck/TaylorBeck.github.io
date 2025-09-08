@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6R9BXBCRT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W6R9BXBCRT');
+    </script>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -185,19 +194,22 @@
 
     <script src="script.js"></script>
     <script>
-      // Share functionality
+      // Share functionality with analytics
       function shareOnTwitter() {
         const url = encodeURIComponent(window.location.href);
         const text = encodeURIComponent("AI in Web Development: The Silent Revolution");
+        trackBlogShare('twitter', 'AI in Web Development');
         window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
       }
 
       function shareOnLinkedIn() {
         const url = encodeURIComponent(window.location.href);
+        trackBlogShare('linkedin', 'AI in Web Development');
         window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
       }
 
       function copyToClipboard() {
+        trackBlogShare('copy_link', 'AI in Web Development');
         navigator.clipboard.writeText(window.location.href).then(() => {
           // Show a temporary success message
           const copyBtn = document.querySelector('.share-btn.copy');
