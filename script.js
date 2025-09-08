@@ -227,8 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Track navigation clicks
-  const navLinks = document.querySelectorAll('.navbar a, .drawer-nav a');
-  navLinks.forEach(link => {
+  const allNavLinks = document.querySelectorAll('.navbar a, .drawer-nav a');
+  allNavLinks.forEach(link => {
     link.addEventListener('click', () => {
       const pageName = link.textContent.trim();
       trackEvent('navigation_click', {
