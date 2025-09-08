@@ -29,8 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const darkImages = darkContainer.querySelectorAll('img');
   darkImages.forEach(img => {
     const src = img.src;
-    const darkSrc = src.replace('-light.', '-dark.');
+    const srcset = img.srcset;
+    
+    // Update main src
+    const darkSrc = src.replace('-light-', '-dark-');
     img.src = darkSrc;
+    
+    // Update srcset if it exists
+    if (srcset) {
+      const darkSrcset = srcset.replace(/-light-/g, '-dark-');
+      img.srcset = darkSrcset;
+    }
   });
 
   // Mode switch event listener
@@ -62,11 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to check if an element is in viewport
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+    // Element is considered in viewport if any part of it is visible
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.bottom >= 0 &&
+      rect.right >= 0 &&
+      rect.top <= windowHeight &&
+      rect.left <= windowWidth
     );
   }
 
@@ -82,8 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add scroll event listener
   window.addEventListener('scroll', handleScroll);
-  // Trigger once on load
-  handleScroll();
+  // Trigger once on load with a small delay to ensure DOM is fully rendered
+  setTimeout(handleScroll, 100);
+  
+  // Also trigger when window is fully loaded
+  window.addEventListener('load', () => {
+    setTimeout(handleScroll, 50);
+  });
 
   // Navigation drawer functionality
   function setupNavDrawer(containerElement) {
